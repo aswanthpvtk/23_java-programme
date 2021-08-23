@@ -1,67 +1,43 @@
-import java.util.Scanner;
+import java.util.*;
 
-class Shape{
-    float x;
-    Shape(float a){
-        x=a;
+class Shapes{
+
+    void area(float radius){
+        System.out.println("Area of the Circle is : "+ (3.14*radius));
     }
+
+    void area(float length, float breadth){
+        System.out.println("Area of the Rectangle is : "+ (breadth*length));
+    }
+    void area(float length, float breadth, float height){
+        System.out.println("Area of the Box is : "+ ((2*length*breadth)+(2*length*height)+(2*height*breadth)));
+    }
+
 }
 
-class Square extends Shape{
-    Square(float s){
-        super(s);
-    }
-    void Area(float x){
-        System.out.println("The area of Square is : "+(x*x));
-    }
-}
-
-class Rectangle extends Shape{
-    float y;   
-    Rectangle(float l,float b){
-        super(l);
-        y=b;
-    }
-    void Area(float x,float y){
-        System.out.println("The area of Rectangle is : "+(x*y));
-    }
-}
-
-class Circle extends Shape{
-    Circle(float r){
-        super(r);
-    }
-    void Area(double x){
-        double z=Math.PI*x*x;
-        System.out.println("The area of the Circle is : "+z);
-    }
-}
 
 public class Over {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+    public static void main(String[] args){
+        Scanner read = new Scanner(System.in);
+        float r,l,b,lbox,bbox,hbox;
+        Shapes s=new Shapes();
+        System.out.print("Enter the Radius of the circle:");
+        r=read.nextFloat();
+        s.area(r);
+        System.out.println("Enter the length and breadth of the Rectangle:");
+        System.out.print("Length : ");
+        l=read.nextFloat();
+        System.out.print("Breadth : ");
+        b=read.nextFloat();
+        s.area(l,b);
+        System.out.println("Enter the length,height and breadth of the Box:");
+        System.out.print("Length : ");
+        lbox=read.nextFloat();
+        System.out.print("Breadth : ");
+        bbox=read.nextFloat();
+        System.out.print("Height : ");
+        hbox=read.nextFloat();
+        s.area(lbox,bbox,hbox);
 
-        float SqSide;
-        float Length;
-        float Breadth;
-        float Radious;
-
-        System.out.println("Enter the Side of the Square : ");
-        SqSide=sc.nextFloat();
-        Square p=new Square(SqSide);
-
-        System.out.println("Enter the Length of the Reactangle : ");
-        Length=sc.nextFloat();
-        System.out.println("Enter the Breadth of the Rectangle : ");
-        Breadth=sc.nextFloat();
-        Rectangle lb=new Rectangle(Length, Breadth);
-
-        System.out.println("Enter the Radious of the Circle : ");
-        Radious=sc.nextFloat();
-        Circle r=new Circle(Radious);
-
-        p.Area(SqSide);
-        lb.Area(Length, Breadth);
-        r.Area(Radious);
     }
 }

@@ -19,7 +19,7 @@ public class ComplexMain {
         AddComplexNumbers c2 = new AddComplexNumbers();
 
         c1.setValues(4, 1);
-        c2.setValues(5, 1);
+        c2.setValues(6, 1);
 
         c2.addition(c1);
 

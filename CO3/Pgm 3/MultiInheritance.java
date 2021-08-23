@@ -59,30 +59,30 @@ public class MultiInheritance {
         read.nextLine();
         Teacher[] t = new Teacher[limit];
         for(int i=0; i<limit; i++){
-            System.out.print("\n\n______________________________\n\nEnter the Details of Teacher "+(i+1)+"\n______________________________\n\n");
+            System.out.print("Enter the Details of Teacher "+(i+1)+"");
             System.out.print("Enter the Name : ");
             name = read.nextLine();
-            System.out.print("\nEnter the Gender : ");
+            System.out.print("Enter the Gender : ");
             gender = read.nextLine();
-            System.out.print("\nEnter the Address : ");
+            System.out.print("Enter the Address : ");
             Add = read.nextLine();
-            System.out.print("\nEnter the Age : ");
+            System.out.print("Enter the Age : ");
             age = read.nextInt();
             read.nextLine();
-            System.out.print("\nEnter the Employee Id : ");
+            System.out.print("Enter the Employee Id : ");
             Eid = read.nextLine();
-            System.out.print("\nEnter the Company Name : ");
+            System.out.print("Enter the Company Name : ");
             cname = read.nextLine();
-            System.out.print("\nEnter the Qualification : ");
+            System.out.print("Enter the Qualification : ");
             ql = read.nextLine();
-            System.out.print("\nEnter the Salary : ");
+            System.out.print("Enter the Salary : ");
             salary = read.nextDouble();
             read.nextLine();
-            System.out.print("\nEnter the Department : ");
+            System.out.print("Enter the Department : ");
             Dept = read.nextLine();
-            System.out.print("\nEnter the Subject tought by the teacher : ");
+            System.out.print("Enter the Subject tought by the teacher : ");
             sub = read.nextLine();
-            System.out.print("\nEnter the Teacher Id : ");
+            System.out.print("Enter the Teacher Id : ");
             Tid = read.nextLine();
             t[i] = new Teacher(sub,Dept,Tid,Eid,cname,ql,salary,name,gender,Add,age);
         }
@@ -91,7 +91,7 @@ public class MultiInheritance {
     static void displayDetails(Teacher[] t){
         for(int i=0;i<t.length;i++){
             System.out.println("\n\t\t\tDetails of a Teacher "+(i+1));
-            System.out.println("\t\t___________________________________\n");
+            
             t[i].display();
         }
     }
